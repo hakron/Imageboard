@@ -1,0 +1,281 @@
+html {
+  height: 100%;
+}
+
+body {
+  background-color: rgb(246, 239, 225);
+  min-height: 100%;
+  font-family: monospace;
+  color: rgb(81, 146, 242)
+}
+
+
+/*<===== index html styles ======>*/
+
+.content {
+  flex: 1;
+}
+
+.cover {
+  height: 200px;
+  display: flex;
+  justify-content: flex-start;
+  background-image: url("/Angular/pics/cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.cover h1 {
+  font-size: 50px;
+  color: rgb(81, 146, 242);
+  margin: 5px;
+  align-self: flex-end;
+  display: flex;
+}
+
+#logo {
+  height: 50px;
+  width: 50px;
+  align-self: flex-end;
+  /*order: -1;*/
+}
+
+
+/*<======= nav bar =======>*/
+
+ul {
+  /*border: 2px solid rgb(255, 255, 255);*/
+  display: flex;
+  /*width: 100%;*/
+  justify-content: space-around;
+  list-style-type: none;
+  margin: 0;
+  padding: 5px;
+  overflow: hidden;
+  background-color: rgb(246, 239, 225);
+}
+
+li {
+  float: left;
+}
+
+li a {
+  font-family: Georgia;
+  font-size: 18px;
+  display: block;
+  color: rgb(81, 146, 242);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+
+/* Change the link color to rgb(27, 116, 247) on hover */
+
+li a:hover {
+  color: white;
+  font-size: 19px;
+  border-radius: 5px;
+  /*width: 100px;*/
+  background-color: rgb(27, 116, 247);
+  text-align: center;
+  /*padding: 14px 16px;*/
+}
+
+
+/*<======= nav bar ends =======>*/
+
+
+/*<========= footer ===========>*/
+
+.footer {
+  position: flex;
+  align-items: flex-end;
+  background-color: rgb(246, 239, 225);
+  text-align: center;
+}
+
+.footer a {
+  color: rgb(81, 146, 242);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+#txt-footer {
+  color: rgb(81, 146, 242);
+  /*font-family: Lobster;*/
+}
+
+
+/*<=========== home page css =======>*/
+
+#search {
+  display: flex;
+  justify-content: center;
+  width: 25%;
+  margin: 5px auto;
+}
+
+input[type="search"], {
+  padding: 10px;
+  border: solid 1px #fff;
+  box-shadow: inset 1px 1px 2px 0 #707070;
+  transition: box-shadow 0.3s;
+}
+
+input[type="search"]:focus, input[type="search"].focus {
+  box-shadow: inset 1px 1px 2px 0 #c9c9c9;
+}
+
+.imgs-container {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  margin: 0;
+}
+
+.imgs-container img {
+  width: 50%;
+  height: 50%;
+  min-height: 209px;
+  min-width: 200px;
+}
+
+figure {
+  width: 200px;
+  margin: 5px;
+}
+
+figure p {
+  color: rgb(81, 146, 242);
+  font-size: 12px;
+}
+
+figure p:last-child {
+  font-size: 10px;
+}
+
+
+/*<======== upload page css ==========>*/
+.main{
+
+  display: flex;
+  justify-content: center;
+}
+h1 {
+}
+
+.wrap {
+  clear: both;
+  display: grid;
+  grid-column-start: 3;
+  justify-content: center;
+}
+
+input, textarea {
+  width: 200px;
+}
+
+input {
+  width: 100%;
+  clear: both;
+  align-self: center;
+  text-align: center;
+}
+input[type="text"], {
+  padding: 10px;
+  border: solid 1px #fff;
+  box-shadow: inset 1px 1px 2px 0 #707070;
+  transition: box-shadow 0.3s;
+}
+
+input[type="text"]:focus, input[type="text"].focus {
+  box-shadow: inset 1px 1px 2px 0 #c9c9c9;
+}
+
+textarea {
+  vertical-align: middle;
+  padding: 10px;
+  border: solid 1px #fff;
+  box-shadow: inset 1px 1px 2px 0 #707070;
+  transition: box-shadow 0.3s;
+}
+
+textarea:focus, textarea.focus {
+  box-shadow: inset 1px 1px 2px 0 #c9c9c9;
+}
+
+label {
+  text-align: center;
+  font-weight: bold;
+}
+
+#btn {
+  /*display: flex;*/
+  width: 150px;
+  justify-content: center;
+  color: rgb(81, 146, 242);
+  border: 1px solid rgb(27, 116, 247);
+  font-weight: bold;
+  background-color: #fff;
+  cursor: pointer;
+  margin: 0 auto;
+}
+
+#btn:hover {
+  color: #FFF;
+  background: rgb(27, 116, 247);
+  order: 1px solid #fff;
+}
+
+
+
+/*<=========== single image page ===========>*/
+
+.single-img-container {
+  display: flex;
+  justify-content: center;
+}
+
+.single-img-container figure {
+  width: 800px;
+}
+
+.single-img-container img {
+  width: 100%;
+  min-width: 800px;
+}
+
+.single-img-container figcaption {
+  text-align: center;
+}
+
+.single-img-container figcaption p:not(:last-child) {
+  font-size: 20px;
+}
+#name{
+  width: 100px;
+
+}
+.comments-wrap {
+  display: flex;
+  justify-content: flex-start;
+  flex-flow: row wrap;
+  margin: 5px;
+}
+
+.comment-wrap input[type="submit"] {
+  align-self: center;
+}
+
+span {
+  font-size: 10px;
+}
+
+.comments-cnt {
+  border: 2px solid rgba(27, 116, 247, 0.50);
+  border-radius: 25px;
+  margin: 5px;
+  padding: 5px;
+}

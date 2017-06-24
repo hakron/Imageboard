@@ -1,0 +1,18 @@
+
+
+<div ng controller="searchCtrl">
+  <input type="search" id="search" class="form-control" placeholder="Search for an image" ng-model="search">
+</div>
+<div class="imgs-container" ng-controller="picList">
+  <div ng-if="images.length > 0" ng-repeat="image in images | searchFor:search" class="cnt">
+    <figure>
+      <a ui-sref="single({imageId:image.id})">  <img src="uploads/{{image.image}}"/></a>
+      <figcaption>
+        <p class="title"><b>Title:</b> {{image.title}}</p>
+        <p class="description"><b>Description:</b> {{image.description}}</p>
+        <p class="author"><b>Author:</b> {{image.username}}</p>
+        <p class="date"> {{image.created_at}} </p>
+      </figcaption>
+    </figure>
+  </div>
+</div>

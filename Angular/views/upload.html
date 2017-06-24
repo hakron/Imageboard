@@ -1,0 +1,32 @@
+<div class="main">
+<div ng-controller="uploadImgsCtrl">
+  <h1> Upload your image to the web</h1>
+  <h2> {{msg}} </h2>
+    <form id="search-form">
+      <!-- <img src="/static/imgs/folder.png"> -->
+      <div class="wrap">
+        <label>Choose your file
+          <input type="file" id="file" name="img" ng-model="img.img">
+        </label>
+        <br>
+        <!-- <label> Img url
+          <input type="text" id="url-img" name="url-img" ng-model="img.img">
+        </label> -->
+        <!-- <br> -->
+        <label>Title
+          <input type="text" name="title" value="Title" ng-model="img.title">
+        </label>
+        <br>
+        <label> Description
+          <textarea name="name" rows="5" cols="20" name="description" value="Description" ng-model="img.description"></textarea>
+        </label>
+        <br>
+        <label> Author
+          <input type="text" name="author" value="Author" ng-model="img.author">
+        </label>
+        <br>
+        <input id="btn" type="submit" name="upload" value="Upload" ng-click="submit(img)">
+      </div>
+    </form>
+  </div>
+</div>

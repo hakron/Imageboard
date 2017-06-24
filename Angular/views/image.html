@@ -1,0 +1,36 @@
+<div class="single-img-container" ng-controller="singleImageController">
+  <div class="single-img-container">
+    <figure>
+      <img src="uploads/{{image.image}}" />
+      <figcaption>
+        <p class="title"><b>Title:</b> {{image.title}}</p>
+        <p class="description"><b>Description:</b> {{image.description}}</p>
+        <p class="author"><b>Author:</b> {{image.username}}</p>
+        <p class="date"> {{image.created_at}} </p>
+      </figcaption>
+    </figure>
+  </div>
+  <!-- <==== here display the comments =========> -->
+  <div class="comments-container">
+    <div ng-if="image.comments.length > 0" ng-repeat="comment in image.comments" class="comments-cnt">
+      <p class="description"><b>Comment:</b> {{comment.comments}}</p>
+      <p class="author"><b>Usename:</b> {{comment.name}} <br> <span>{{comment.created_at}}</span></p>
+    </div>
+    <input id="btn" type="submit" name="post" value="Delete Image" ng-click="remove()">
+  </div>
+  <div ng-controller="commentCtrl" class="comments-wrap">
+    <form id="comments-form">
+      <div class="wrap">
+        <label>Name
+           <input type="text" id="name" name="name" ng-model="comment.name">
+             </label>
+        <br>
+        <label> Comment
+          <textarea rows="2" cols="5" name="body" ng-model="comment.bodycomment"></textarea>
+        </label>
+        <br>
+        <input id="btn" type="submit" name="post" value="Post it" ng-click="submit(comment)">
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,45 @@
+const bodyParser = require('body-parser');
+const express = require('express');
+const path = require('path');
+// <=========== multer package ===========>
+const multer = require('multer');
+const diskStorage = multer.diskStorage({
+  destination: function(req, file, callback){
+    callback(null, path.dirname(__dirname) + '/uploads');
+  },
+  filename: function (req, file, callback){
+    callback(null, Date.now() + '_' + Math.floor(Math.random() * 99999999) + '_' + file.originalname);
+  }
+});
+const uploader = multer({
+  storage: diskStorage,
+  limits: {
+    filesize: 2097152
+  }
+});
+// <============= end multer ============>
+router = express.Router();
+// <======= bodyparser ===========>
+router.use(bodyParser.urlencoded({
+  extended: false
+}));
+router.get('/', function(req, res){
+    res.redirect('/upload');
+
+});
+router.route('/upload')
+.get(function(req, res){
+  res.render('index');
+})
+.post(uploader.single('file'), function(req, res) {
+  if (req.file) {
+    res.send('index',{
+        file: '/uploads/'req.file.filename
+    });
+  } else {
+    res.json({
+      success: false
+    });
+  }
+});
+module.exports = router;
