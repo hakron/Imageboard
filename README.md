@@ -7,4 +7,4 @@ If the user click on an image, the users go to another page and in this page the
 
 Project created with:
 
-  o	Javascript  | Angular | NodeJs | Express.js | Jquery | PostgreSQL | SQL | HTML | CSS
+    o	Javascript  | Angular | NodeJs | Express.js | Jquery | PostgreSQL | SQL | HTML | CSS
