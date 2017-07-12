@@ -90,8 +90,11 @@ li a:hover {
 /*<========= footer ===========>*/
 
 .footer {
-  position: flex;
-  align-items: flex-end;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  overflow: hidden;
   background-color: rgb(246, 239, 225);
   text-align: center;
 }
@@ -158,13 +161,13 @@ figure p:last-child {
 
 
 /*<======== upload page css ==========>*/
-.main{
 
+.main {
   display: flex;
   justify-content: center;
 }
-h1 {
-}
+
+h1 {}
 
 .wrap {
   clear: both;
@@ -183,6 +186,7 @@ input {
   align-self: center;
   text-align: center;
 }
+
 input[type="text"], {
   padding: 10px;
   border: solid 1px #fff;
@@ -230,7 +234,6 @@ label {
 }
 
 
-
 /*<=========== single image page ===========>*/
 
 .single-img-container {
@@ -254,10 +257,11 @@ label {
 .single-img-container figcaption p:not(:last-child) {
   font-size: 20px;
 }
-#name{
-  width: 100px;
 
+#name {
+  width: 100px;
 }
+
 .comments-wrap {
   display: flex;
   justify-content: flex-start;
